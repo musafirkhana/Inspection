@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">BafInspection</string>
+    <string name="trade_1">মাগুর Frame</string>
+    <string name="trade_2">মাগুর Armament</string>
+    <string name="trade_3">মাগুর Electrical</string>
+    <string name="trade_4">মাগুর LSEW</string>
+    <string name="trade_5">মাগুর Radio</string>
+    <string name="trade_6">মাগুর Engine</string>
+    <string name="trade_7">মাগুর Instruement</string>
+    <string name="trade_8">মাগুর Question</string>
+    <string name="trade_9">মাগুর System</string>
+
+    <string name="app_bbd">আসুন আমরা বেশি বেশি মাগুর কোপাই দেশ মাগুর মুক্ত করি</string>
+    <string name="app_coxs">COXS</string>
+
 </resources>
