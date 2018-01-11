@@ -6,14 +6,14 @@
     <color name="colorAccent">#FF4081</color>
     <color name="red">#bf360c</color>
     <color name="ripple_red">#D8554A</color>
-    <color name="ripple_material_teal">#ff149691</color>
+    <color name="ripple_material_teal">#33D8F4</color>
     <color name="blue">#304f9f</color>
     <color name="colorPrimary">#FF7E00</color>
     <color name="windowBackgroundColor">#333333</color>
     <color name="black_translucent">#90333333</color>
     <color name="view_bg">#FF7E00</color>
     <color name="home_bg">#3F51B5</color>
-    <color name="home_bg_2">#FFFFFF</color>
+    <color name="home_bg_2">#FCF9E8</color>
 
 
     <!-- Material Light_Blue Primary -->
@@ -56,7 +56,7 @@
     <color name="refresh_progress_2">@color/accent_color_dark</color>
     <color name="refresh_progress_3">@color/primary_color</color>
     <color name="leftmenu_divider">#36434C</color>
-    <color name="button_background">#2697D7</color>
+    <color name="button_background">#006A5D</color>
     <color name="login_background">#F1F5F7</color>
     <color name="edtitext_back">#FFFFFF</color>
     <color name="edtitext_hintcolor">#9FA2A4</color>
@@ -74,7 +74,7 @@
     <color name="btBG">#555555</color>
     <color name="fontRed">#FF0000</color>
     <color name="fontWhite">#FFFFFF</color>
-    <color name="gray">#AAAAAA</color>
+    <color name="gray">#0A4D66</color>
     <color name="gray_light">#ECECEC</color>
     <color name="gray_xlight">#EFE7EF</color>
     <color name="gray_dark">#909090</color>
@@ -85,5 +85,5 @@
     <color name="sky_blue">#007AFF</color>
     <color name="scan_btbg">#9A5F30</color>
     <color name="circle_color">#112B38</color>
-
+    <color name="fontcolor">#DD8C4E</color>
 </resources>

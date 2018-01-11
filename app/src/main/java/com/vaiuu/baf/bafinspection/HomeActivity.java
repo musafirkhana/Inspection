@@ -19,9 +19,10 @@ import android.widget.LinearLayout;
 public class HomeActivity extends Activity  {
     private Context mContext;
 
-    private LinearLayout main_menu_li;
     private AlertDialog mGPSDialog;
     private static final int GPS_ENABLE_REQUEST = 0x1001;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,46 +37,56 @@ public class HomeActivity extends Activity  {
     }
     public void TRADE1(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("trade",getString(R.string.trade_1));
         startActivity(intent);
     }
 
-    public void TRADE12(View v) {
+    public void TRADE2(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("trade",getString(R.string.trade_2));
+
         startActivity(intent);
     }
 
     public void TRADE3(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("trade",getString(R.string.trade_3));
         startActivity(intent);
     }
 
-    public void TRADE14(View v) {
+    public void TRADE4(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("trade",getString(R.string.trade_4));
         startActivity(intent);
     }
 
     public void TRADE5(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("trade",getString(R.string.trade_5));
         startActivity(intent);
     }
 
     public void TRADE6(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("trade",getString(R.string.trade_6));
         startActivity(intent);
     }
 
     public void TRADE7(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("trade",getString(R.string.trade_7));
         startActivity(intent);
     }
 
     public void TRADE8(View v) {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("trade",getString(R.string.trade_8));
         startActivity(intent);
     }
 
-    public void TRADE0(View v) {
+    public void TRADE9(View v) {
         Intent intent = new Intent(this, SystemActivity.class);
+        intent.putExtra("trade",getString(R.string.trade_9));
         startActivity(intent);
     }
 }

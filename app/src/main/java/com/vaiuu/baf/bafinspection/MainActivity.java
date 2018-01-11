@@ -33,24 +33,41 @@ public class MainActivity extends AppCompatActivity implements OnPageChangeListe
     private PDFView pdfView;
     Uri uri;
     Integer pageNumber = 0;
-
+private String trade="";
     String pdfFileName;
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_main);
-        pdfView=(PDFView)findViewById(R.id.pdfView);
-        pickFile();
-        afterViews();
-    }
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private final static int REQUEST_CODE = 42;
     public static final int PERMISSION_CODE = 42042;
 
-    public static final String SAMPLE_FILE = "sample.pdf";
+    public  String SAMPLE_FILE = "sample.pdf";
     public static final String READ_EXTERNAL_STORAGE = "android.permission.READ_EXTERNAL_STORAGE";
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        setContentView(R.layout.activity_main);
+        trade=getIntent().getStringExtra("trade");
+        if (trade.equalsIgnoreCase(getString(R.string.trade_1))){
+            SAMPLE_FILE = "airframe.pdf";
+        }else if(trade.equalsIgnoreCase(getString(R.string.trade_2))){
+            SAMPLE_FILE = "armament.pdf";
+        }else if(trade.equalsIgnoreCase(getString(R.string.trade_3))){
+            SAMPLE_FILE = "electrical.pdf";
+        }else if(trade.equalsIgnoreCase(getString(R.string.trade_4))){
+            SAMPLE_FILE = "lsew.pdf";
+        }else if(trade.equalsIgnoreCase(getString(R.string.trade_5))){
+            SAMPLE_FILE = "radio.pdf";
+        }else if(trade.equalsIgnoreCase(getString(R.string.trade_6))){
+            SAMPLE_FILE = "engine.pdf";
+        }else if(trade.equalsIgnoreCase(getString(R.string.trade_7))){
+            SAMPLE_FILE = "instruement.pdf";
+        }
+        pdfView=(PDFView)findViewById(R.id.pdfView);
+        pickFile();
+        afterViews();
+    }
+
 
 
 

@@ -2,450 +2,50 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ripple_material_teal"
     android:orientation="vertical">
 
+    <LinearLayout
+        android:id="@+id/top_linear"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/button_background"
+        android:gravity="center">
 
-    <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_above="@+id/excercise_scroll"
-        android:layout_centerInParent="true">
-
-        <LinearLayout
-            android:id="@+id/top_linear"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:padding="0dp">
+            android:layout_height="50dp"
+            android:background="@color/button_background">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:padding="0dp">
+            <TextView
+                android:id="@+id/topbar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Bangladesh মাগুর force"
+                android:textColor="@color/fontcolor"
+                android:textSize="18sp"
+                android:textStyle="bold|normal" />
 
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="120dp"
-                    android:layout_weight="2"
-                    android:padding="10dp">
+        </RelativeLayout>
 
-                    <LinearLayout
-                        android:id="@+id/relative_0"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/button_selector"
-                        android:clickable="true"
-                        android:gravity="center"
-                        android:onClick="TRADE0"
-                        android:orientation="vertical"
-                        android:paddingBottom="20dp">
 
-                        <ImageView
-                            android:id="@+id/image_1"
-                            android:layout_width="50dp"
-                            android:layout_marginTop="10dp"
-                            android:layout_height="50dp"
-                            android:background="@drawable/magur" />
+    </LinearLayout>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/trade_9"
-                            android:textColor="@color/fontWhite"
-                            android:textSize="16sp"
-                            android:textStyle="bold" />
-                    </LinearLayout>
 
-                </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/main_menu_li"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/excercise_scroll"
+        android:layout_below="@+id/top_linear"
+        android:visibility="visible">
 
+        <include layout="@layout/activity_home_support" />
 
-            </LinearLayout>
+    </LinearLayout>
 
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/divider"></View>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:padding="0dp">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/home_box_hight"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <RelativeLayout
-                        android:id="@+id/relative_1"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/home_rounded_selector"
-                        android:clickable="true"
-                        android:onClick="TRADE1"
-                        android:orientation="vertical"
-                        android:paddingBottom="20dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/magur" />
-
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_1"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/trade_1"
-                        android:textColor="@color/fontWhite"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/divider"></View>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/home_box_hight"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <RelativeLayout
-                        android:id="@+id/relative_2"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/home_rounded_selector"
-                        android:clickable="true"
-                        android:onClick="TRADE2"
-                        android:orientation="vertical"
-                        android:paddingBottom="20dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/magur" />
-
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_2"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/trade_2"
-                        android:textColor="@color/fontWhite"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/divider"></View>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:padding="0dp">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/home_box_hight"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <RelativeLayout
-                        android:id="@+id/relative_3"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/home_rounded_selector"
-                        android:clickable="true"
-                        android:onClick="TRADE3"
-                        android:orientation="vertical"
-                        android:paddingBottom="20dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/magur" />
-
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_3"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/trade_3"
-                        android:textColor="@color/fontWhite"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/divider"></View>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/home_box_hight"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <RelativeLayout
-                        android:id="@+id/relative_4"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/home_rounded_selector"
-                        android:clickable="true"
-                        android:onClick="TRADE4"
-                        android:orientation="vertical"
-                        android:paddingBottom="20dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/magur" />
-
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_4"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/trade_4"
-                        android:textColor="@color/fontWhite"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/divider"></View>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:padding="0dp">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/home_box_hight"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <RelativeLayout
-                        android:id="@+id/relative_5"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/home_rounded_selector"
-                        android:clickable="true"
-                        android:onClick="TRADE5"
-                        android:orientation="vertical"
-                        android:paddingBottom="20dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/magur" />
-
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_5"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/trade_5"
-                        android:textColor="@color/fontWhite"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/divider"></View>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/home_box_hight"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <RelativeLayout
-                        android:id="@+id/relative_6"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/home_rounded_selector"
-                        android:clickable="true"
-                        android:onClick="TRADE6"
-                        android:orientation="vertical"
-                        android:paddingBottom="20dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/magur" />
-
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_6"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/trade_6"
-                        android:textColor="@color/fontWhite"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/divider"></View>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                android:padding="0dp">
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/home_box_hight"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <RelativeLayout
-                        android:id="@+id/relative_7"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/home_rounded_selector"
-                        android:clickable="true"
-                        android:onClick="TRADE7"
-                        android:orientation="vertical"
-                        android:paddingBottom="20dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/magur" />
-
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_7"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/trade_7"
-                        android:textColor="@color/fontWhite"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-                <View
-                    android:layout_width="2dp"
-                    android:layout_height="match_parent"
-                    android:background="@color/divider"></View>
-
-                <RelativeLayout
-                    android:layout_width="0dp"
-                    android:layout_height="@dimen/home_box_hight"
-                    android:layout_weight="2"
-                    android:padding="10dp">
-
-                    <RelativeLayout
-                        android:id="@+id/relative_8"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
-                        android:layout_centerInParent="true"
-                        android:background="@drawable/home_rounded_selector"
-                        android:clickable="true"
-                        android:onClick="TRADE8"
-                        android:orientation="vertical"
-                        android:paddingBottom="20dp">
-
-                        <ImageView
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_centerInParent="true"
-                            android:background="@drawable/magur" />
-
-
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/relative_8"
-                        android:layout_centerHorizontal="true"
-                        android:text="@string/trade_8"
-                        android:textColor="@color/fontWhite"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-                </RelativeLayout>
-
-            </LinearLayout>
-
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="2dp"
-                android:background="@color/divider"></View>
-
-        </LinearLayout>
-
-
-    </ScrollView>
-
-    <TextView
+    <!--<TextView
         android:id="@+id/excercise_scroll"
         android:layout_width="fill_parent"
         android:layout_height="50dip"
@@ -460,18 +60,9 @@
         android:scrollHorizontally="true"
         android:singleLine="true"
         android:text="@string/app_bbd"
-        android:textColor="@color/white"
+        android:textColor="@color/fontcolor"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold" />-->
 
-    <LinearLayout
-        android:id="@+id/main_menu_li"
-        android:layout_width="fill_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentLeft="true"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-    </LinearLayout>
 
 </RelativeLayout>
