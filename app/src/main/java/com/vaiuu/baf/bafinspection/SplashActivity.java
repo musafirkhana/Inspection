@@ -6,6 +6,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.database.SQLException;
+import android.media.MediaPlayer;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Environment;
@@ -32,24 +33,35 @@ public class SplashActivity extends Activity {
 
     public static ProgressDialog progDialogConfirm;
     boolean flag = true;
-
+    MediaPlayer mp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);
         context = this;
-
+        mp=MediaPlayer.create(this, R.raw.audio);
        // initUI();
         // startTimer();
         //initUI();
-
+        mp.start();
     }
 
 
 
+    public void pauseSong(View v) {
+        mp.pause();
+    }
+
+    public void stopSong(View v) {
+        mp.stop();
+       // mp=MediaPlayer.create(this, R.raw.abcd);
+    }
+
 
     public void GO(View v) {
+        mp.stop();
+
         Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
         startActivity(intent);
         SplashActivity.this.finish();
