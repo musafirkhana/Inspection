@@ -1,66 +1,48 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent" >
+    android:layout_height="match_parent">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_centerInParent="true"
-        android:scaleType="centerCrop"
-        android:src="@drawable/magur" />
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
 
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:orientation="vertical" >
 
-        <LinearLayout
-            android:layout_width="fill_parent"
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/youtube_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/textView"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="30dp" />
+
+
+        <WebView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/home_rounded_selector"
-            android:gravity="center_horizontal"
-            android:orientation="vertical" >
+            android:layout_above="@+id/fff"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/fontcolor"
+            android:textSize="16dp"
+            android:textStyle="italic"
+            tools:ignore="WebViewLayout"></WebView>
 
-            <com.google.android.youtube.player.YouTubePlayerView
-                android:id="@+id/youtube_view"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="30dp" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="70dp"
-                android:layout_marginBottom="20dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/magur" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="10dp"
-                android:text="dfdfd"
-                android:textColor="@color/fontcolor"
-                android:textSize="20dp"
-                android:textStyle="bold" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="40dp"
-                android:layout_marginBottom="30dp"
-                android:scaleType="fitCenter"
-                android:src="@drawable/magur" />
-        </LinearLayout>
 
         <Button
+            android:id="@+id/fff"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/button_selector"
+            android:onClick="SKIP"
             android:text="skip" />
-    </LinearLayout>
+    </RelativeLayout>
 
-</RelativeLayout>
+</LinearLayout>

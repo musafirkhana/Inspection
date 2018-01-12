@@ -119,7 +119,7 @@ public class HomeActivity extends Activity implements BaseSliderView.OnSliderCli
     }
 
     public void TRADE8(View v) {
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, VideoListActivity.class);
         intent.putExtra("trade",getString(R.string.trade_8));
         startActivity(intent);
     }

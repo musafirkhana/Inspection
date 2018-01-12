@@ -2,8 +2,10 @@ package com.vaiuu.baf.bafinspection;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.webkit.WebView;
 import android.widget.Toast;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -19,7 +21,8 @@ public class YoutubeActivity extends YouTubeBaseActivity implements
 
 	// YouTube player view
 	private YouTubePlayerView youTubeView;
-
+private WebView textView;
+	String text;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,7 +31,11 @@ public class YoutubeActivity extends YouTubeBaseActivity implements
 				WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
 		setContentView(R.layout.activity_youtube);
-
+		textView=(WebView)findViewById(R.id.textView);
+		text = "<html><body><p align=\"justify\">";
+		text+= "This Application is use for Bangladesh Air Force Personnel.All this substance of this are the copyright substance of Bangladesh Air Force.Developer don\\'t take any liabilities for any sort of copyright infringement by the Users.";
+		text+= "</p></body></html>";
+		textView.loadData(text, "text/html", "utf-8");
 		youTubeView = (YouTubePlayerView) findViewById(R.id.youtube_view);
 
 		// Initializing video player with developer key
@@ -72,5 +79,8 @@ public class YoutubeActivity extends YouTubeBaseActivity implements
 	private YouTubePlayer.Provider getYouTubePlayerProvider() {
 		return (YouTubePlayerView) findViewById(R.id.youtube_view);
 	}
-
+public void SKIP(View v){
+	Intent intent = new Intent(this, SplashActivity.class);
+	startActivity(intent);
+}
 }
