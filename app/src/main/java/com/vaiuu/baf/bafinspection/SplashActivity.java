@@ -1,15 +1,11 @@
 package com.vaiuu.baf.bafinspection;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.database.SQLException;
 import android.media.MediaPlayer;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -40,11 +36,11 @@ public class SplashActivity extends Activity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_splash);
         context = this;
-        mp=MediaPlayer.create(this, R.raw.audio);
+        //mp=MediaPlayer.create(this, R.raw.audio);
        // initUI();
         // startTimer();
         //initUI();
-        mp.start();
+      //  mp.start();
     }
 
 
@@ -60,7 +56,7 @@ public class SplashActivity extends Activity {
 
 
     public void GO(View v) {
-        mp.stop();
+        //mp.stop();
 
         Intent intent = new Intent(SplashActivity.this, HomeActivity.class);
         startActivity(intent);

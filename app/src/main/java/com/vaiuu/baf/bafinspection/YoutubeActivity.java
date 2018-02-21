@@ -80,6 +80,7 @@ private WebView textView;
 		return (YouTubePlayerView) findViewById(R.id.youtube_view);
 	}
 public void SKIP(View v){
+		this.finish();
 	Intent intent = new Intent(this, SplashActivity.class);
 	startActivity(intent);
 }
